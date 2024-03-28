@@ -5,7 +5,7 @@ let id;
 let iconURL = `https://openweathermap.org/img/wn/${id}.png`;
 
 function getCurrentWeather(city) {
-  const queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=imperial`;
+  const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=imperial`;
   fetch(queryURL)
     .then(function (response) {
       if (response.ok) {
@@ -39,7 +39,7 @@ function getCurrentWeather(city) {
 
 function getForcast(lat, lon) {
   // const geoURL = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${APIKey}`
-  const queryURL= `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=5&appid=${APIKey}&units=imperial`
+  const queryURL= `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=5&appid=${APIKey}&units=imperial`
   $('#forcast').empty();
   fetch(queryURL)
     .then(function(response) {
